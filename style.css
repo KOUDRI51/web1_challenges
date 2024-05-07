@@ -1,0 +1,79 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font family */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #333; /* Darkish color */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Alternate background colors for sections */
+section:nth-child(odd) {
+    background-color: #f0f0f0; /* Lighter color */
+}
+
+section:nth-child(even) {
+    background-color: #e0e0e0; /* Slightly darker color */
+}
+
+/* Style images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Add curves */
+    border: 2px solid #333; /* Add borders */
+}
+
+/* Style form inputs */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: orange; /* Orange-y color */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333; /* Darkish color */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
