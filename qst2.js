@@ -1,8 +1,7 @@
-//Create an object representing a person with 
-// properties such as name, age, and email. Write a
-//  function that takes an array of these objects and returns a 
-//  new array containing only the people who are over 30 years old.
+//Function to find the longest word in an array of words:
 
-
-
-const peopleOver30 = people => people.filter(person => person.age > 30);
+function longestWord(words) {
+    return words.reduce((longest, current) => {
+        return current.length > longest.length ? current : longest;
+    }, "");
+}

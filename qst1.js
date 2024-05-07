@@ -1,7 +1,7 @@
-//Write a function that takes an array of numbers and
-// returns a new array containing only the even numbers.
+//Function to calculate the average of all even numbers in an array:
 
-
-function filterEvenNumbers(arr) {
-    return arr.filter(num => num % 2 === 0);
+function averageOfEvenNumbers(numbers) {
+    const evenNumbers = numbers.filter(num => num % 2 === 0);
+    const sum = evenNumbers.reduce((acc, curr) => acc + curr, 0);
+    return sum / evenNumbers.length;
 }

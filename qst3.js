@@ -1,25 +1,7 @@
-//Implement a stack data structure in JavaScript using an array.
+//Function to calculate the average number of pages across all books in an array of book objects:
 
 
-class Stack {
-    constructor() {
-        this.items = [];
-    }
-
-    push(element) {
-        this.items.push(element);
-    }
-
-    pop() {
-        if (this.items.length === 0) return "Underflow";
-        return this.items.pop();
-    }
-
-    peek() {
-        return this.items[this.items.length - 1];
-    }
-
-    isEmpty() {
-        return this.items.length === 0;
-    }
+function averagePages(books) {
+    const totalPages = books.map(book => book.pages).reduce((acc, curr) => acc + curr, 0);
+    return totalPages / books.length;
 }
