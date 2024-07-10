@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOUR math Application </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NOUR math Application </h1>
+        <div id="question-container">
+            <p id="question"> </p>
+            <input type="number" id="answer" placeholder="Your answer">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        <p id="feedback"> </p>
+        <button onclick="generateQuestion()">New Question</button>
+    </div>
+</body>
+</html>
+
+<script>
+    let num1, num2;
+
+function generateQuestion() {
+    num1 = Math.floor(Math.random() * 10) + 1;
+    num2 = Math.floor(Math.random() * 10) + 1;
+
+    document.getElementById('question').innerText = `What is ${num1} x ${num2}?`;
+    document.getElementById('feedback').innerText = '';
+    document.getElementById('answer').value = '';
+}
+
+function checkAnswer() {
+    const userAnswer = parseInt(document.getElementById('answer').value);
+    const correctAnswer = num1 * num2;
+
+    if (userAnswer === correctAnswer) {
+        document.getElementById('feedback').innerText = 'Bravo!';
+        document.getElementById('feedback').style.color = 'green';
+    } else {
+        document.getElementById('feedback').innerText = `That's wrong. The correct answer is ${correctAnswer}.`;
+        document.getElementById('feedback').style.color = 'red';
+    }
+}
+
+window.onload = generateQuestion;
+
+</script>
